@@ -3,6 +3,8 @@ import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import Branding from './Branding/Branding';
+import Brands from './Brands/Brands';
+import Services from './Services/Services';
 
 const Intro = styled(Box)(({ theme }) => ({
    backgroundColor: theme.palette.primary.secondary,
@@ -20,7 +22,8 @@ const Home = () => {
             </Container>
          </Intro>
          <Container>
-            <h3>Main</h3>
+            <Brands />
+            <Services />
             <Footer />
          </Container>
       </>

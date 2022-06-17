@@ -8,6 +8,8 @@ export const Nav = styled(Stack)(({ theme }) => ({
 export const MenuItem = styled(Typography)(({ theme }) => ({
    color: '#474747',
    textDecoration: 'none',
+   cursor: 'pointer',
+
 }));
 
 export const activeHeaderMenuStyle = {
