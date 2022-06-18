@@ -11,7 +11,7 @@ const Projects = () => {
             <SectionTitle
                title='Here are some of'
                colored='our works'
-               sx={{ my: 5, color: '#ffffff' }}
+               sx={{ my: 5, color: '#ffffff', mb: 9 }}
             />
          </Container>
          <SwiperSlider />
