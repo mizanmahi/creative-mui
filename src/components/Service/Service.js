@@ -10,9 +10,16 @@ const Service = ({ image }) => {
       <Card
          sx={{
             maxWidth: 370,
+            mx: 'auto',
             borderRadius: '0px',
             background: 'transparent',
             boxShadow: 'none',
+            pt: 2,
+            cursor: 'pointer',
+            '&:hover': {
+               boxShadow: '0px 4px 80px rgba(0, 0, 0, 0.1)',
+               borderRadius: '8px',
+            }
          }}
       >
          <CardMedia

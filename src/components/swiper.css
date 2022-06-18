@@ -1,0 +1,21 @@
+.my_swiper .swiper-pagination {
+   position: absolute;
+   bottom: -10% !important;
+   left: 0;
+   width: 100%;
+   text-align: center;
+   z-index: 10;
+}
+
+.my_swiper .swiper-pagination-bullet {
+    background: white !important;
+    opacity: 1;
+    height: 0.5rem;
+    width: 0.5rem;
+ }
+ 
+ .my_swiper .swiper-pagination-bullet-active {
+    background: #ffd05b !important;
+    transform: scale(2);
+ }
+ 

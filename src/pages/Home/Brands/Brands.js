@@ -10,7 +10,7 @@ const Brands = () => {
       'https://i.ibb.co/Rhk2VSh/image-9.png',
    ];
    return (
-      <Stack direction='row' spacing={8} sx={{my: 6}}>
+      <Stack direction={{ xs: 'column', md: 'row' }} spacing={8} sx={{ my: 6 }}>
          {brands.map((brand, index) => (
             <img
                key={index}
