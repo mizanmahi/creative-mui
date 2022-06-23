@@ -30,5 +30,5 @@ export const theme = createTheme({
 
    typography: {
       fontFamily: '"Poppins", "Roboto", "Helvetica", "Arial", sans-serif',
-   }
+   },
 });

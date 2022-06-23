@@ -46,6 +46,13 @@ function SwiperSlider() {
                   style={{ width: '100%' }}
                />
             </SwiperSlide>
+            <SwiperSlide> 
+               <img
+                  src='https://i.ibb.co/Bq6tmFL/Mask-Group.png'
+                  alt=''
+                  style={{ width: '100%' }}
+               />
+            </SwiperSlide>
          </Swiper>
       </>
    );

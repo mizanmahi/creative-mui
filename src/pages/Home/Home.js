@@ -4,6 +4,8 @@ import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import Branding from './Branding/Branding';
 import Brands from './Brands/Brands';
+import Clients from './Clients.js/Clients';
+import NewsLetter from './NewsLetter/NewsLetter';
 import Projects from './Projects/Projects';
 import Services from './Services/Services';
 
@@ -27,6 +29,10 @@ const Home = () => {
             <Services />
          </Container>
          <Projects />
+         <Container>
+            <Clients />
+         </Container>
+         <NewsLetter />
          <Footer />
       </>
    );
