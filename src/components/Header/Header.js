@@ -1,15 +1,18 @@
 import { Button, Menu, MenuItem, Stack, useMediaQuery } from '@mui/material';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { activeHeaderMenuStyle, MyMenuItem, Nav } from './header.style';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../../firebase/firebase.init';
+import { signOut } from 'firebase/auth';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 export const Header = () => {
    const matchMd = useMediaQuery((theme) => theme.breakpoints.down('md'));
 
    const [anchorEl, setAnchorEl] = useState(null);
-
    const open = Boolean(anchorEl);
    const handleMenuClick = (e) => {
       setAnchorEl(e.currentTarget);
@@ -18,7 +21,11 @@ export const Header = () => {
       setAnchorEl(null);
    };
 
-   console.log(matchMd);
+   const navigate = useNavigate();
+   const [user] = useAuthState(auth);
+
+   console.log(user);
+
    return (
       <Nav direction='row'>
          <img
@@ -74,7 +81,15 @@ export const Header = () => {
                </MyMenuItem>
                <MyMenuItem>Our Portfolio</MyMenuItem>
                <MyMenuItem>Our Team</MyMenuItem>
-               <Button>Login</Button>
+
+               {!user && (
+                  <Button onClick={() => navigate('/login')}>Login</Button>
+               )}
+               {user && (
+                  <Button endIcon={<LogoutIcon />} onClick={() => signOut(auth)}>
+                     Logout
+                  </Button>
+               )}
             </Stack>
          )}
       </Nav>

@@ -17,7 +17,7 @@ function SwiperSlider() {
       <>
          <Swiper
             slidesPerView={4}
-            spaceBetween={50}
+            // spaceBetween={40}
             centeredSlides={true}
             pagination={{
                clickable: true,
@@ -25,7 +25,7 @@ function SwiperSlider() {
             breakpoints={{
                1024: {
                   slidesPerView: 4,
-                  spaceBetween: 0,
+                  spaceBetween: 40,
                },
                960: {
                   slidesPerView: 3,
