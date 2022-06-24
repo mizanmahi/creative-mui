@@ -17,10 +17,28 @@ function SwiperSlider() {
       <>
          <Swiper
             slidesPerView={4}
-            spaceBetween={20}
+            spaceBetween={50}
             centeredSlides={true}
             pagination={{
                clickable: true,
+            }}
+            breakpoints={{
+               1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 0,
+               },
+               960: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+               },
+               640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+               },
+               0: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+               },
             }}
             modules={[Pagination]}
             className='my_swiper'
@@ -46,7 +64,7 @@ function SwiperSlider() {
                   style={{ width: '100%' }}
                />
             </SwiperSlide>
-            <SwiperSlide> 
+            <SwiperSlide>
                <img
                   src='https://i.ibb.co/Bq6tmFL/Mask-Group.png'
                   alt=''
