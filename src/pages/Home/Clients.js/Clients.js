@@ -5,7 +5,7 @@ import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 
 const Clients = () => {
    return (
-      <Box sx={{ mt: 11, mb: 12 }}>
+      <Box sx={{ mt: 11, mb: 12, width: '100%' }}>
          <SectionTitle title='Clients' colored='Feedback' />
          <Box
             sx={{
@@ -13,7 +13,6 @@ const Clients = () => {
                justifyContent: 'space-between',
                flexDirection: { xs: 'column', md: 'row' },
                alignItems: 'center',
-               
             }}
          >
             <Client />

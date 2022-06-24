@@ -18,9 +18,9 @@ const Services = () => {
                'https://i.ibb.co/HNhykGp/iphone-1.png',
                'https://i.ibb.co/r0gHkvM/color-palette-1.png',
                'https://i.ibb.co/CvQwzKC/coding-1.png',
-            ].map((item) => (
-               <Grid item xs={12} sm={6} md={4} justifyContent='center'>
-                  <Service image={item}/>
+            ].map((item, i) => (
+               <Grid item xs={12} sm={6} md={4} justifyContent='center' key={i}>
+                  <Service image={item} />
                </Grid>
             ))}
          </Grid>

@@ -1,5 +1,21 @@
-import { Stack } from '@mui/material';
+import { Box, styled } from '@mui/material';
 import React from 'react';
+
+const Wrapper = styled(Box)(({ theme }) => ({
+   display: 'flex',
+   justifyContent: 'space-between',
+   margin: '6rem 0 7rem 0',
+   [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+      alignItems: 'center',
+   },
+   '& img': {
+      height: '60px',
+      [theme.breakpoints.down('md')]: {
+         marginBottom: '3rem',
+      },
+   },
+}));
 
 const Brands = () => {
    const brands = [
@@ -9,17 +25,13 @@ const Brands = () => {
       'https://i.ibb.co/99gcp3b/image-8.png',
       'https://i.ibb.co/Rhk2VSh/image-9.png',
    ];
+
    return (
-      <Stack direction={{ xs: 'column', md: 'row' }} spacing={8} sx={{ my: 6 }}>
+      <Wrapper>
          {brands.map((brand, index) => (
-            <img
-               key={index}
-               src={brand}
-               alt={`brands ${index}`}
-               style={{ width: 'auto', height: '60px' }}
-            />
+            <img key={index} src={brand} alt={`brands ${index}`} />
          ))}
-      </Stack>
+      </Wrapper>
    );
 };
 

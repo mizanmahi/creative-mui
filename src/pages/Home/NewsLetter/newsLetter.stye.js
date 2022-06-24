@@ -14,6 +14,7 @@ export const Input = styled('input')(({ theme, fullWidth }) => ({
    padding: '8px 0 8px 8px',
    fontSize: '18px',
    fontFamily: 'inherit',
+   boxSizing: 'border-box',
    '&::placeholder': {
       fontSize: '18px',
       color: 'rgba(0,0,0,0.5)',
@@ -27,6 +28,7 @@ export const MyTextareaAutosize = styled(TextareaAutosize)(
       height: 50,
       maxWidth: '100%',
       width: '100%',
+      boxSizing: 'border-box',
       border: 0,
       outline: 0,
       borderRadius: '3px',

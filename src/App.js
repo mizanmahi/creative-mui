@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Review from './pages/Dashboard/Review/Review';
+import './App.css'
 
 const routes = [
    {
