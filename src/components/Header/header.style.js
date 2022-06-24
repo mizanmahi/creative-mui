@@ -5,7 +5,7 @@ export const Nav = styled(Stack)(({ theme }) => ({
    justifyContent: 'space-between',
    alignItems: 'center',
 }));
-export const MenuItem = styled(Typography)(({ theme }) => ({
+export const MyMenuItem = styled(Typography)(({ theme }) => ({
    color: '#474747',
    textDecoration: 'none',
    cursor: 'pointer',
