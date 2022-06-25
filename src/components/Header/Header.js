@@ -76,7 +76,7 @@ export const Header = () => {
                >
                   Home
                </MyMenuItem>
-               <MyMenuItem component={NavLink} to='/dashboard'>
+               <MyMenuItem component={NavLink} to='/dashboard/order'>
                   Dashboard
                </MyMenuItem>
                <MyMenuItem>Our Portfolio</MyMenuItem>
