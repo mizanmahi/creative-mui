@@ -4,6 +4,9 @@ import React from 'react';
 const BrandingWrapper = styled(Box)(({ theme }) => ({
    backgroundColor: 'rgba(122, 178, 89, 0.15)',
    height: '70vh',
+   '@media (max-width: 600px)': {
+      height: '50vh',
+   },
    clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0% 100%)',
    padding: theme.spacing(5),
    borderRadius: theme.spacing(2),
@@ -23,10 +26,10 @@ const Branding = () => {
                   >
                      <Typography
                         sx={{
-                           fontSize: '4rem',
+                           fontSize: ['1.8rem', '2.2rem' ,'4rem'],
                            fontWeight: 600,
                            color: 'primary.main',
-                           lineHeight: '80px',
+                           lineHeight: ['40px', '50px' ,'80px'],
                         }}
                      >
                         Let’s Grow Your Brand To The Next Level
@@ -42,7 +45,9 @@ const Branding = () => {
                      <Button>Hire Us</Button>
                   </Stack>
                </Grid>
-               <Grid item sm={6} xs={12}>
+               <Grid item sm={6} xs={12} sx={{
+                  display: ['none','flex'],
+               }}>
                   <Box>
                      <img
                         src='https://i.ibb.co/sPXVMbC/Frame.png'

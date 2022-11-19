@@ -4,8 +4,8 @@ export const Wrapper = styled(Box)(({ theme }) => ({
    width: '100%',
    maxWidth: '400px',
    padding: '1.5rem',
-   borderRadius: '8px',
-   boxShadow: '0px 4px 80px rgba(0, 0, 0, 0.1)',
+   borderRadius: '4px',
+  border: '1px solid #BFBFBF',
    marginTop: theme.spacing(8),
    // boxSizing: 'border-box',
    '&:not(:last-child)': {

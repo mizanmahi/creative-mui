@@ -9,6 +9,9 @@ const SectionTitle = ({ title, colored, sx }) => {
             sx={{
                fontSize: '2.1rem',
                fontWeight: 'bold',
+               '@media (max-width: 600px)': {
+                  fontSize: '1.5rem',
+               },
                ...sx,
             }}
          >

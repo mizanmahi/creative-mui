@@ -12,6 +12,7 @@ const CreativeCard = () => {
       <Card
          sx={{
             maxWidth: 350,
+            minWidth: 350,
             p: 2,
             borderRadius: '10px',
             border: '1px solid #C7C7C7',
@@ -32,7 +33,7 @@ const CreativeCard = () => {
          <CardContent
             sx={{
                p: 0,
-               pt: 2,
+               pt: 3,
 
                '&:last-child': {
                   pb: 0,

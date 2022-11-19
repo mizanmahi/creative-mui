@@ -47,8 +47,12 @@ export const MyTextareaAutosize = styled(TextareaAutosize)(
          color: 'rgba(0,0,0,0.5)',
          fontFamily: 'inherit',
       },
-      '&:focus': {
+      '&:hover': {
          outline: '1px solid #7AB259',
-      }
+      },
+      '&:focus': {
+     
+         outline: '1px solid #7AB259',
+      },
    })
 );

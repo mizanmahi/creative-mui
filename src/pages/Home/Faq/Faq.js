@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import CreativeAccordion from '../../../components/custom/CreativeAccordion/CreativeAccordion';
+import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 
 const Faq = () => {
    return (
@@ -9,9 +10,7 @@ const Faq = () => {
             my: 11,
          }}
       >
-         <Typography variant='h4' fontWeight={600} textAlign='center' mb={3}>
-            Frequently Asked Questions
-         </Typography>
+         <SectionTitle title='Frequently Asked' colored='Questions' mb={3} />
 
          <Box
             sx={{

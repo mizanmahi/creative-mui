@@ -1,4 +1,4 @@
-import { Box, IconButton, Typography } from '@mui/material';
+import { Box, Grid, IconButton, Typography } from '@mui/material';
 import React from 'react';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 import Tabs from '@mui/material/Tabs';
@@ -15,15 +15,18 @@ const OurWorks = () => {
    };
 
    return (
-      <Box sx={{
-         my: 11,
-      }}>
+      <Box
+         sx={{
+            my: 11,
+         }}
+      >
          <Box
             sx={{
                display: 'flex',
                justifyContent: 'space-between',
                alignItems: 'center',
                mb: 5,
+               flexDirection: ['column', 'column', 'row'],
             }}
          >
             <SectionTitle
@@ -40,6 +43,7 @@ const OurWorks = () => {
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
+                  flexDirection: ['column', 'column', 'row'],
                }}
             >
                <Tabs
@@ -51,11 +55,12 @@ const OurWorks = () => {
                         display: 'none',
                      },
                      '& .MuiButtonBase-root': {
-                        fontWeight: 'bold',
+                        // fontWeight: 'bold',
                      },
                      '& .Mui-selected': {
-                        color: '#7AB259',
-                     }
+                        color: '#7AB259 !important',
+                        fontWeight: 'bold',
+                     },
                   }}
                >
                   <Tab label='All' />
@@ -105,11 +110,26 @@ const OurWorks = () => {
                </Box>
             </Box>
          </Box>
-         
 
          {/* card section */}
          <Box>
-                        <CreativeCard />
+            <Grid
+               container
+               spacing={5}
+               sx={{
+                  justifyContent: 'space-around',
+               }}
+            >
+               <Grid item>
+                  <CreativeCard />
+               </Grid>
+               <Grid item>
+                  <CreativeCard />
+               </Grid>
+               <Grid item>
+                  <CreativeCard />
+               </Grid>
+            </Grid>
          </Box>
       </Box>
    );
