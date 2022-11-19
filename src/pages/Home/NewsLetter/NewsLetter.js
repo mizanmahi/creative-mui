@@ -1,13 +1,5 @@
-import {
-   Box,
-   Button,
-   Container,
-   TextareaAutosize,
-   TextField,
-   Typography,
-} from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 import React from 'react';
-import Footer from '../../../components/Footer/Footer';
 import { Input, MyTextareaAutosize, Wrapper } from './newsLetter.stye';
 
 const NewsLetter = () => {
@@ -64,6 +56,10 @@ const NewsLetter = () => {
                            width: {
                               xs: '100%',
                               md: 'auto',
+                           },
+                           bgcolor: 'primary.green',
+                           '&:hover': {
+                              bgcolor: 'primary.green',
                            },
                         }}
                      >

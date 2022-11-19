@@ -88,7 +88,7 @@ const Dashboard = (props) => {
                         }}
                      />
                   </ListItemIcon>
-                  <ListItemText primary='Order' />
+                  <ListItemText primary='Orders' />
                </ListItemButton>
             </ListItem>
             <ListItem

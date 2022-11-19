@@ -1,6 +1,12 @@
 import { Button, createTheme, ThemeProvider } from '@mui/material';
 import { theme } from './theme';
-import { Routes, Route } from 'react-router-dom';
+import {
+   Routes,
+   Route,
+   createBrowserRouter,
+   RouterProvider,
+   createRoutesFromElements,
+} from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Dashboard from './pages/Dashboard/Dashboard';
@@ -9,42 +15,60 @@ import './App.css';
 import Order from './pages/Dashboard/Order/Order';
 import { useState } from 'react';
 import ServiceList from './pages/Dashboard/ServiceList/ServiceList';
+import Layout from './components/Layout/Layout';
+import OurPortfolio from './pages/OurPortfolio/OurPortfolio';
+import OurTeam from './pages/OurTeam/OurTeam';
 
-const routes = [
+const router = createBrowserRouter([
    {
-      component: Home,
+      element: <Layout />,
       path: '/',
-      protected: false,
-      title: 'Home',
+      children: [
+         {
+            element: <Home />,
+            path: '/',
+         },
+         {
+            element: <Login />,
+            path: 'login',
+         },
+         {
+            element: <OurPortfolio />,
+            path: 'our-portfolio',
+         },
+         {
+            element: <OurTeam />,
+            path: 'our-team',
+         },
+      ],
    },
    {
-      component: Login,
-      path: '/login',
-      protected: false,
-      title: 'Login',
+      element: <Dashboard />,
+      path: '/dashboard',
+      children: [
+         {
+            element: <Order />,
+            path: 'order',
+         },
+         {
+            element: <Review />,
+            path: 'review',
+         },
+         {
+            element: <ServiceList />,
+            path: 'service-list',
+         },
+      ],
    },
-];
+]);
 
 function App() {
    return (
-      // <ThemeProvider theme={theme}>
       <ThemeProvider theme={theme}>
          <div className='App'>
-            <Routes>
-               {routes.map(({ path, component: Component }, key) => {
-                  return (
-                     <Route path={path} element={<Component />} key={key} />
-                  );
-               })}
-               <Route path='/dashboard' element={<Dashboard />}>
-                  <Route path='order' element={<Order />} />
-                  <Route path='service-list' element={<ServiceList />} />
-                  <Route path='review' element={<Review />} />
-               </Route>
-            </Routes>
+            <RouterProvider router={router} />
          </div>
       </ThemeProvider>
-      // </ThemeProvider>
    );
 }
 

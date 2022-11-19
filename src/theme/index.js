@@ -4,7 +4,8 @@ export const theme = createTheme({
    palette: {
       primary: {
          main: '#111430',
-         secondary: '#FBD062',
+         yellow: '#FBD062',
+         green: '#7AB259',
       },
    },
    components: {
@@ -23,7 +24,7 @@ export const theme = createTheme({
          defaultProps: {
             variant: 'contained',
             color: 'primary',
-            disableRipple: true,
+            // disableRipple: true,
          },
       },
    },

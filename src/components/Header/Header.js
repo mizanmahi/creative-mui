@@ -1,4 +1,11 @@
-import { Button, Menu, MenuItem, Stack, useMediaQuery } from '@mui/material';
+import {
+   Button,
+   IconButton,
+   Menu,
+   MenuItem,
+   Stack,
+   useMediaQuery,
+} from '@mui/material';
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { activeHeaderMenuStyle, MyMenuItem, Nav } from './header.style';
@@ -76,19 +83,51 @@ export const Header = () => {
                >
                   Home
                </MyMenuItem>
+
+               <MyMenuItem
+                  component={NavLink}
+                  to='/our-portfolio'
+                  style={({ isActive }) =>
+                     isActive ? activeHeaderMenuStyle : undefined
+                  }
+               >
+                  Our Portfolio
+               </MyMenuItem>
+               <MyMenuItem
+                  component={NavLink}
+                  to='/our-team'
+                  style={({ isActive }) =>
+                     isActive ? activeHeaderMenuStyle : undefined
+                  }
+               >
+                  Our Team
+               </MyMenuItem>
+
                <MyMenuItem component={NavLink} to='/dashboard/order'>
                   Dashboard
                </MyMenuItem>
-               <MyMenuItem>Our Portfolio</MyMenuItem>
-               <MyMenuItem>Our Team</MyMenuItem>
 
                {!user && (
-                  <Button onClick={() => navigate('/login')}>Login</Button>
+                  <Button
+                     onClick={() => navigate('/login')}
+                     sx={{
+                        bgcolor: 'primary.green',
+                        '&:hover': {
+                           bgcolor: 'primary.green',
+                        },
+                     }}
+                  >
+                     Login
+                  </Button>
                )}
                {user && (
-                  <Button endIcon={<LogoutIcon />} onClick={() => signOut(auth)}>
-                     Logout
-                  </Button>
+                  <IconButton onClick={() => signOut(auth)}>
+                     <LogoutIcon
+                        sx={{
+                           color: 'primary.main',
+                        }}
+                     />
+                  </IconButton>
                )}
             </Stack>
          )}

@@ -1,7 +1,7 @@
 import { Box, styled } from '@mui/material';
 
 export const Wrapper = styled(Box)(({ theme }) => ({
-   marginTop: '4rem',
+   height: 'calc(100vh - 64px)',
 }));
 export const LoginBox = styled(Box)(({ theme }) => ({
    border: '1px solid #ABABAB',
@@ -9,7 +9,6 @@ export const LoginBox = styled(Box)(({ theme }) => ({
    height: '500px',
    width: '600px',
    maxWidth: '100%',
-   margin: '4rem auto',
    display: 'flex',
    justifyContent: 'center',
    alignItems: 'center',

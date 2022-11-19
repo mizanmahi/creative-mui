@@ -5,35 +5,30 @@ import Header from '../../components/Header/Header';
 import Branding from './Branding/Branding';
 import Brands from './Brands/Brands';
 import Clients from './Clients.js/Clients';
+import Faq from './Faq/Faq';
 import NewsLetter from './NewsLetter/NewsLetter';
+import OurWorks from './OurWorks/OurWorks';
 import Projects from './Projects/Projects';
 import Services from './Services/Services';
-
-const Intro = styled(Box)(({ theme }) => ({
-   backgroundColor: theme.palette.primary.secondary,
-   height: '85vh',
-   clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0% 100%)',
-}));
 
 const Home = () => {
    return (
       <>
-         <Intro>
-            <Container>
-               <Header />
-               <Branding />
-            </Container>
-         </Intro>
-         <Container>
-            <Brands />
-            <Services />
-         </Container>
+         <Branding />
+
+         <Brands />
+
+         <Services />
+
+         <OurWorks />
+
          <Projects />
-         <Container>
-            <Clients />
-         </Container>
+
+         <Clients />
+
          <NewsLetter />
-         <Footer />
+
+         <Faq />
       </>
    );
 };

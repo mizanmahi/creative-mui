@@ -1,7 +1,7 @@
 import { CircularProgress } from '@mui/material';
 import React from 'react';
 
-const Loader = () => {
+const Loader = ({ sx, ...props }) => {
    return (
       <CircularProgress
          sx={{
@@ -9,7 +9,9 @@ const Loader = () => {
                height: '30px !important',
                width: '30px !important',
             },
+            ...sx,
          }}
+         {...props}
       />
    );
 };
