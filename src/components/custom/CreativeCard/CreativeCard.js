@@ -76,3 +76,6 @@ const CreativeCard = () => {
 };
 
 export default CreativeCard;
+
+/* https://images.unsplash.com/photo-1661961110372-8a7682543120?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80
+ */

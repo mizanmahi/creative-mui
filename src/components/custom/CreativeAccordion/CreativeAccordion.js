@@ -10,17 +10,25 @@ import { Box, Typography } from '@mui/material';
 const CustomExpandIcon = () => {
    return (
       <Box
-         sx={{
-            '.Mui-expanded & > .collapseIconWrapper': {
-               display: 'none',
-            },
-            '.expandIconWrapper': {
-               display: 'none',
-            },
-            '.Mui-expanded & > .expandIconWrapper': {
-               display: 'block',
-            },
-         }}
+         sx={
+            {
+               // '.Mui-expanded & > .collapseIconWrapper': {
+               //    display: 'none',
+               // },
+               // '.expandIconWrapper': {
+               //    display: 'none',
+               // },
+               // '.Mui-expanded & > .expandIconWrapper': {
+               //    display: 'block',
+               // },
+               // '.Mui-expanded > collapseIconWrapper': {
+               //    display: 'block',
+               // },
+               // '.Mui-expanded > expandIconWrapper': {
+               //    display: 'none',
+               // },
+            }
+         }
       >
          <div className='expandIconWrapper'>
             <RemoveIcon />
@@ -40,7 +48,15 @@ const CreativeAccordion = ({ title, description, sx, ...rest }) => {
             boxShadow: 'none',
             width: '100%',
             maxWidth: '800px',
-            p: 2
+            p: 2,
+            '& .Mui-expanded': {
+               '& .expandIconWrapper': {
+                  display: 'block',
+               },
+               '& .collapseIconWrapper': {
+                  display: 'none',
+               },
+            },
          }}
       >
          <AccordionSummary
@@ -48,6 +64,10 @@ const CreativeAccordion = ({ title, description, sx, ...rest }) => {
             aria-controls='panel1a-content'
             id='panel1a-header'
             sx={{
+               '& .expandIconWrapper': {
+                  display: 'none',
+               },
+
                '& p': {
                   fontWeight: 600,
                   color: 'primary.main',

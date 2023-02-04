@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton, Typography } from '@mui/material';
+import { Box, Grid, IconButton } from '@mui/material';
 import React from 'react';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 import Tabs from '@mui/material/Tabs';

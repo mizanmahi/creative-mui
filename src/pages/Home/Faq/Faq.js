@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import CreativeAccordion from '../../../components/custom/CreativeAccordion/CreativeAccordion';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 
